@@ -8,6 +8,7 @@ const About: React.FC<Props> = () => {
   return (
     <div>
       This is about
+      This is not about
     </div>
   )
 }
