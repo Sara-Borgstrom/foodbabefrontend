@@ -8,6 +8,7 @@ import {
 import About from './Components/About';
 import Blog from './Components/Blog';
 import Home from './Components/Home';
+import Testimonials from './Components/Testimonials';
 
 interface Props {
   
@@ -23,6 +24,12 @@ const Routes: React.FC<Props> = () => {
         <Route path="/blog">
           <Blog />
         </Route>       
+        <Route path="/testimonials">
+          <Testimonials />
+        </Route>    
+        <Route path="/testimonials">
+          <Testimonials />
+        </Route> 
         <Route path={["/home", "/"]}>
           <Home />
         </Route>
