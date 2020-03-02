@@ -1,18 +1,12 @@
-import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import About from './Components/About';
-import Blog from './Components/Blog';
-import Home from './Components/Home';
-import Testimonials from './Components/Testimonials';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import About from "./Components/About";
+import Blog from "./Components/Blog";
+import Home from "./Components/Home";
+import Testimonials from "./Components/Testimonials";
+import SelectedBlogPost from "./Components/SelectedBlogPost";
 
-interface Props {
-  
-}
+interface Props {}
 
 const Routes: React.FC<Props> = () => {
   return (
@@ -21,21 +15,24 @@ const Routes: React.FC<Props> = () => {
         <Route path="/about">
           <About />
         </Route>
+        <Route path="/blog/:id">
+          <SelectedBlogPost />
+        </Route>
         <Route path="/blog">
           <Blog />
-        </Route>       
+        </Route>
         <Route path="/testimonials">
           <Testimonials />
-        </Route>    
+        </Route>
         <Route path="/testimonials">
           <Testimonials />
-        </Route> 
+        </Route>
         <Route path={["/home", "/"]}>
           <Home />
         </Route>
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
-export default Routes
+export default Routes;
