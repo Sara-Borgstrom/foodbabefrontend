@@ -25,3 +25,9 @@ li {
   display: flex;
   justify-content: space-evenly;
 }
+
+.social-icon {
+  width: 25px;
+  height: auto;
+  margin: 3px;
+}
