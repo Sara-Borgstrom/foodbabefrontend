@@ -7,9 +7,8 @@ import {
 import {About} from './Components/About';
 import {Blog} from './Components/Blog';
 import {Home} from './Components/Home';
-import {Testimonials} from './Components/Testimonials';
-import {Contact }from './Components/Contact'
 import { Admin } from './Components/Admin';
+import { BlogPost } from './Components/BlogPost';
 
 export const Routes = () => {
   return (
@@ -20,13 +19,10 @@ export const Routes = () => {
         </Route>
         <Route path="/blog">
           <Blog />
-        </Route>       
-        <Route path="/testimonials">
-          <Testimonials />
-        </Route>    
-        <Route path="/contact">
-          <Contact />
-        </Route> 
+        </Route>      
+        <Route path="/blogpost">
+          <BlogPost />
+        </Route>   
         <Route path="/admin">
           <Admin />
         </Route> 

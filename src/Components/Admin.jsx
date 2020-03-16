@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react'
+import './admin.css'
 
 const API_URL = 'http://localhost:8080/foods'
 
 export const Admin = () => {
   const fileInput = useRef()
-  const [restaurantId, setRestutantId] = useState('')
   const [title, setTitle] = useState('')
   const [link, setLink] = useState('')
   const [description, setDescripion] = useState('')
@@ -14,7 +14,6 @@ export const Admin = () => {
     e.preventDefault();
     const formData = new FormData()
     formData.append('image', fileInput.current.files[0])
-    formData.append('restaurantId', restaurantId)
     formData.append('title', title)
     formData.append('link', link)
     formData.append('description', description)
@@ -27,14 +26,10 @@ export const Admin = () => {
       })
   }
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} className='admin-form'>
       <label>
         Food image
         <input type="file" ref={fileInput} />
-      </label>
-      <label>
-        Restaurant ID
-        <input type="text" value={restaurantId} onChange={(e) => setRestutantId(e.target.value)} />
       </label>
       <label>
         Title
