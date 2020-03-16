@@ -74,9 +74,9 @@ export const Home = () => {
             </div>
             <div className='text-box'>
               <div className='location-nav'>
-                <a href='london-header-on-home'>{welcome.cityList[0]}</a>
-                <a href='amsterdam-header-on-home'>{welcome.cityList[1]}</a>
-                <a href='newyork-header-on-home'>{welcome.cityList[2]}</a>
+                <a href='#london-header-on-home'>{welcome.cityList[0]}</a>
+                <a href='#amsterdam-header-on-home'>{welcome.cityList[1]}</a>
+                <a href='#newyork-header-on-home'>{welcome.cityList[2]}</a>
               </div>              
               <h3 className='text-block'>{welcome.headText}</h3>
             </div>
