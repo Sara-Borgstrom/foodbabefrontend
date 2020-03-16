@@ -1,10 +1,6 @@
 import React from 'react'
 
-interface Props {
-  
-}
-
-const About: React.FC<Props> = () => {
+export const About = () => {
   return (
     <div>
       This is about
@@ -12,5 +8,3 @@ const About: React.FC<Props> = () => {
     </div>
   )
 }
-
-export default About
