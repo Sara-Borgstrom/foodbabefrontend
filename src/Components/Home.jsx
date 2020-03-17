@@ -1,25 +1,12 @@
 import React from 'react'
 import './home.css'
+import {Header} from './Header'
+import {Footer} from './Footer'
 import img1 from '../assets/img1.jpg'
 import lon1 from '../assets/lon1.jpeg'
 import ams1 from '../assets/ams1.jpeg'
 import nyc1 from '../assets/nyc1.jpeg'
-import insta from '../assets/insta.png'
-import faceb from '../assets/facebook.png'
-import pinterest from '../assets/pinterest.png'
-import twitter from '../assets/twitter.png'
 import FBlogo from '../assets/FBlogo.png'
-import { useHistory } from 'react-router-dom'
-
-const startmenu = {
-  title: "Food Babes",
-  menuList: [
-    "About",
-    "Blog",
-    "Testimonails",
-    "Contact us"
-  ]
-};
 
 const welcome = {
   title: "Welcome to Food Babes",
@@ -33,34 +20,11 @@ const welcome = {
 }
 
 export const Home = () => {
-  const history = useHistory()
-  const handleClick = () => {
-    history.push('/contact')
-  }
+
   return (
     <div>
       <section>
-        <header> 
-          <div className='phone-header'>
-            <h1 className='head-title'>FOOD BABES</h1>
-            <div className='hamburger'>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-          <div className='desktop-header'>
-            <h1 className='head-title'>FOOD BABES</h1>
-            <div className='nav-bar'>
-              <nav className='nav'>
-                <a href='/about'> {startmenu.menuList[0]} </a>
-                <a href='/blog'> {startmenu.menuList[1]} </a>
-                <a href='/testimonials'> {startmenu.menuList[2]} </a>
-                <a href='/contact'> {startmenu.menuList[3]}</a>
-              </nav>
-            </div>
-          </div>
-        </header>
+        <Header />
         <div className='first-part'>
           {/* Find a better way to do this */}
           <div className='presentation-box'>
@@ -97,18 +61,8 @@ export const Home = () => {
             <img src={nyc1} className='city-img' alt=''/>
           </div>
         </div>
-        <footer>
-          <h3>HUNGRY FOR MORE? GET IN TOUCH BELOW.</h3>
-          <button className='contact-button' type='button' onClick={handleClick}>Contact</button>
-          <div className='social-container'>
-            <a href='https://www.instagram.com/londonfoodbabes/' className='social-link'><img src={insta} className='social-icon' alt=''/></a>
-            <a href='https://www.facebook.com/londonfoodbabes' className='social-link'><img src={faceb} className='social-icon' alt='' /></a>
-            <a href='https://twitter.com/Londonfoodbabes' className='social-link'><img src={twitter} className='social-icon' alt='' /></a>
-            <a href='https://www.pinterest.se/londonfoodbabes/' className='social-link'><img src={pinterest} className='social-icon' alt='' /></a>
-          </div>
-          
-        </footer>
       </section>
+      <Footer />
     </div>
   )
 }
