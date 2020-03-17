@@ -1,4 +1,5 @@
 import React,{ useState, useEffect }  from 'react'
+import './blogpost.css'
 
 // Comment - on post url blog/id, text 
 // CMS?? or just preadded posts
@@ -7,24 +8,25 @@ const url = 'http://localhost:8080/foods'
 
 export const BlogPost = () => {
   const [post, setPost] = useState([]);
-  
   useEffect (() => {
     fetch(url)
       .then(res => res.json())
       .then(json => setPost(json));
   }, [post]);
-
   return (
-    <main>
-      <ul>
-        {post.map(post => (
-          <>
-            <li key={post.title}>{post.title}</li>
-            <li key={post.description}>{post.description}</li>
-            <li key={post.imageUrl}>{post.imageUrl}</li>
-          </>
-        ))}
-      </ul>
-    </main>
+
+    <article className='blog-container'>
+      {post.map(post => (
+        <>
+          <div className='blog-box'>
+            <h3><span>{post.type}</span></h3>
+            <h2><span>{post.title}</span></h2>
+            <p><span>{post.description}</span></p>
+            <button onClick={post.link} className='link-button'>Find more</button>
+          </div>
+        </>
+      ))}
+    </article>
+   
   )
 }
