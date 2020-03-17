@@ -23,7 +23,7 @@ module.exports = {
   },
   "plugins": [
     "react",
-    "@typescript-eslint"
+    "@typescript-eslint",
     "react-hooks"
   ],
   "rules": {
