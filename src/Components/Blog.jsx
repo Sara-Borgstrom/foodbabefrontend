@@ -18,7 +18,7 @@ export const Blog = ({title, description, link, type, _id}) => {
         type={type}
         title={title}
         description={description}
-        button={link}/>
+        link={link}/>
     
       <Footer />
     </>
