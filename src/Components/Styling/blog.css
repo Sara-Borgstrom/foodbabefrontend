@@ -7,3 +7,9 @@
   width: 70px;
   margin: 15px;
 }
+
+@media (max-width: 650px) {
+  .signin-button {
+    display: none;
+  }
+}

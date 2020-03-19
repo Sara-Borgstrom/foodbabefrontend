@@ -46,7 +46,7 @@ h1 {
   margin: 5px;
 }
 
-@media screen and (max-width: 650px) {
+@media (max-width: 650px) {
   header {
     overflow-x: hidden;
     position: relative;
