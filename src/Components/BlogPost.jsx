@@ -1,5 +1,5 @@
 import React,{ useState, useEffect }  from 'react'
-import './blogpost.css'
+import './Styling/blogpost.css'
 
 // Comment - on post url blog/id, text 
 // CMS?? or just preadded posts
