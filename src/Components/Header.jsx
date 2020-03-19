@@ -1,10 +1,7 @@
 import React from 'react'
 import './Styling/header.css'
 
-
 export const Header = () => {
-
-
   return (
     <>
       <header> 
