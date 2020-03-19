@@ -1,14 +1,15 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './Styling/admin.css'
 
-const API_URL = 'http://localhost:8080/foods'
+const URL = 'http://localhost:8080/foods'
 
-export const Admin = () => {
+export const Admin = ({onClick}) => {
   const fileInput = useRef()
   const [title, setTitle] = useState('')
   const [link, setLink] = useState('')
   const [description, setDescripion] = useState('')
   const [type, setType] = useState('')
+  const accessToken = window.localStorage.getItem('accessToken')
 
   const handleFormSubmit = (e)=> {
     e.preventDefault();
@@ -19,37 +20,54 @@ export const Admin = () => {
     formData.append('description', description)
     formData.append('type', type)
 
-    fetch(API_URL, { method: 'POST', body: formData })
+    fetch(URL, { method: 'POST', body: formData })
       .then((res) => res.json())
       .then((json) => {
         console.log(json)
       })
   }
+  useEffect(() => {
+    const fetchUserData = () => {
+      const URL= `https://project-auth-app.herokuapp.com/users/current`
+      return fetch(URL, {
+        method: 'GET',
+        headers: {'Authorization': accessToken}
+      })
+        .then(res => res.json())
+        .catch(err => {
+          console.log('error', err)
+        })
+    }
+    fetchUserData()
+  })
   return (
-    <form onSubmit={handleFormSubmit} className='admin-form'>
-      <label>
+    <>
+      <form onSubmit={handleFormSubmit} className='admin-form'>
+        <label>
         Food image
-        <input type="file" ref={fileInput} />
-      </label>
-      <label>
+          <input type="file" ref={fileInput} />
+        </label>
+        <label>
         Title
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-      </label>
-      <label>
+          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+        </label>
+        <label>
         Link
-        <input type="text" value={link} onChange={(e) => setLink(e.target.value)} />
-      </label>
-      <label>
+          <input type="text" value={link} onChange={(e) => setLink(e.target.value)} />
+        </label>
+        <label cla>
        Description
-        <input type="textarea" value={description} onChange={(e) => setDescripion(e.target.value)} />
-      </label>
-      <label>
+          <textarea rows='3' type="text" value={description} onChange={(e) => setDescripion(e.target.value)} />
+        </label>
+        <label>
         Type
-        <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
-      </label>
-      <button type="submit">
+          <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
+        </label>
+        <button type="submit" className='submit-button'>
         Submit
-      </button>
-    </form>
+        </button>
+      </form>
+      <button type='button' className='button-signout' onClick={onClick}>Sign out </button>
+    </>
   )
 }

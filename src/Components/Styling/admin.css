@@ -5,8 +5,34 @@
     justify-content: baseline;
     margin-left: 50px;
     padding: 20px;
+    width: 350px;
+  }
+  
+  .description-box {
+    display: flex;
+    flex-direction: row;
   }
   
   input {
     margin: 3px;
+  }
+  
+  .submit-button {
+    padding: 5px;
+    margin: 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b5dddf;
+    width: 70px;
+    margin: 15px;
+  }
+  
+  .button-signout {
+    padding: 5px;
+    margin: 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b5dddf;
+    width: 70px;
+    margin: 15px;
   }
