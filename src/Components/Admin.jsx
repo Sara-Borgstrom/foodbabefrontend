@@ -41,7 +41,7 @@ export const Admin = () => {
       </label>
       <label>
        Description
-        <input type="text" value={description} onChange={(e) => setDescripion(e.target.value)} />
+        <input type="textarea" value={description} onChange={(e) => setDescripion(e.target.value)} />
       </label>
       <label>
         Type
