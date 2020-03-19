@@ -1,5 +1,5 @@
 import React from 'react'
-import './home.css'
+import './Styling/home.css'
 import {Header} from './Header'
 import {Footer} from './Footer'
 import img1 from '../assets/img1.jpg'

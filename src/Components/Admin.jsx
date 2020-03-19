@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import './admin.css'
+import './Styling/admin.css'
 
 const API_URL = 'http://localhost:8080/foods'
 

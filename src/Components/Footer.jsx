@@ -4,17 +4,17 @@ import faceb from '../assets/facebook.png'
 import pinterest from '../assets/pinterest.png'
 import twitter from '../assets/twitter.png'
 import { useHistory } from 'react-router-dom'
-import './footer.css'
+import './Styling/footer.css'
 
 export const Footer = () => {
   const history = useHistory()
   const handleClick = () => {
-    history.push('/contact')
+    history.push('/home')
   }
   return (
     <footer>
       <h3>HUNGRY FOR MORE? GET IN TOUCH BELOW.</h3>
-      <button className='contact-button' type='button' onClick={handleClick}>Contact</button>
+      <button className='contact-button' type='button' onClick={handleClick}>HOME</button>
       <div className='social-container'>
         <a href='https://www.instagram.com/londonfoodbabes/' className='social-link'><img src={insta} className='social-icon' alt=''/></a>
         <a href='https://www.facebook.com/londonfoodbabes' className='social-link'><img src={faceb} className='social-icon' alt='' /></a>
