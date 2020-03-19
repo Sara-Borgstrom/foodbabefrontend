@@ -1,0 +1,40 @@
+.babe-text {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-bottom: -50px;
+}
+
+.babe-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #b5dddf;
+  justify-content: space-evenly;
+  padding-top: 160px;
+}
+
+.babe-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.babe-box img {
+  width: 300px;
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.babe-box p {
+  letter-spacing: 3px;
+  margin: 20px;
+  font-weight: 900;
+}
+
+@media (max-width:650px) {
+  .babe-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

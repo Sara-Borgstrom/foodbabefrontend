@@ -8,6 +8,7 @@ import {About} from './Components/About';
 import {Blog} from './Components/Blog';
 import {Home} from './Components/Home';
 import { Admin } from './Components/Admin';
+import { Contact } from './Components/Contact';
 import { BlogPost } from './Components/BlogPost';
 
 export const Routes = () => {
@@ -23,6 +24,9 @@ export const Routes = () => {
         <Route path="/blogpost">
           <BlogPost />
         </Route>   
+        <Route path="/contact">
+          <Contact />
+        </Route>  
         <Route path="/admin">
           <Admin />
         </Route> 
