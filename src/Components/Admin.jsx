@@ -13,6 +13,7 @@ export const Admin = ({onClick}) => {
 
   const handleFormSubmit = (e)=> {
     e.preventDefault();
+
     const formData = new FormData()
     formData.append('image', fileInput.current.files[0])
     formData.append('title', title)
@@ -24,6 +25,11 @@ export const Admin = ({onClick}) => {
       .then((res) => res.json())
       .then((json) => {
         console.log(json)
+        setTitle('')
+        setLink('')
+        setDescripion('')
+        setType('')
+        fileInput.current.value=null
       })
   }
   useEffect(() => {
@@ -61,7 +67,12 @@ export const Admin = ({onClick}) => {
         </label>
         <label>
         Type
-          <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
+          <select type="text" value={type} onChange={(e) => setType(e.target.value)} >
+            <option value="Brunch">Brunch</option>
+            <option value="Afternoon Tea">Afternoon Tea</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Drinks">Drinks</option>
+          </select>
         </label>
         <button type="submit" className='submit-button'>
         Submit
