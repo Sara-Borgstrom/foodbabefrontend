@@ -1,4 +1,5 @@
 import React, { useState} from 'react'
+import {Link} from "react-router-dom";
 import './Styling/header.css'
 
 export const Header = () => {
@@ -13,13 +14,13 @@ export const Header = () => {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <a href="/home">Home</a>
+              <Link to="/home">Home</Link>
             </li>
             <li className="list-item">
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li className="list-item">
-              <a href="/blog">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
           <div className="toggle-burger-menu">
@@ -31,13 +32,13 @@ export const Header = () => {
             <div className={`burger-list ${showBurgerMenu ? "show" : ""}`}>
               <ul className="burger-nav-list">
                 <li className="burger-item">
-                  <a href="/home">Home</a>
+                  <Link to="/home">Home</Link>
                 </li>
                 <li className="burger-item">
-                  <a href="/about">About</a>
+                  <Link to="/about">About</Link>
                 </li>
                 <li className="burger-item">
-                  <a href="/blog">Blog</a>
+                  <Link to="/blog">Blog</Link>
                 </li>
               </ul>
             </div>
