@@ -50,6 +50,7 @@
   .text-box {
     display: flex;
     flex-direction: column;
+    margin-top: 35px;
   }
   
   .location-nav {
@@ -63,7 +64,7 @@
   
   .london-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 20px;
     margin-bottom: 155px;
   }
@@ -90,6 +91,7 @@
     width: 75%;
     height: auto;
     align-self: center;
+    object-fit: cover;
   }
   
   @media (min-width:650px) {
@@ -134,7 +136,8 @@
       margin-top: -170px;
     }
     .city-img {
-      width: 650px;
+      max-width: 500px;
+      max-height: 500px;
       height: auto;
     }
   }

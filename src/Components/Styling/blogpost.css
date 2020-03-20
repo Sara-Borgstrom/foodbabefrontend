@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   margin: 30px;
+  align-items: center;
 }
 
 .blog-box {
   width: 320px;
+  height: 600px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -15,6 +17,12 @@
   padding: 15px;
 }
 
+.blog-text-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+}
+
 .blog-image {
   width: 100%;
   height: auto;
@@ -22,6 +30,14 @@
   max-height: 260px;
   object-fit: cover;
   align-self: center;
+}
+
+.link-box {
+  display: flex;
+  align-self: center;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  flex: 1;
 }
 
 .site-link {
@@ -70,12 +86,19 @@ p {
     justify-content: space-evenly;
   }
   .blog-box {
-    width: 20%;
+    margin: 5px;
+    max-width: 23%;
   }
   .blog-image {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 150px;
+    max-height: 150px;
   }
 }
 
-@media (min-width:1440px) {}
+@media (min-width:1440px) {
+  .blog-box {
+    margin: 5px;
+    max-width: 23%;
+    max-height: 450px;
+  }
+}

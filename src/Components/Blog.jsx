@@ -4,10 +4,10 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 import { SignIn } from './SignIn'
 import './Styling/blog.css'
-//Preview and category page
+
 // *The brunch guide. *The afternoon tea guide. *The sunday rost guide. *The dinner guide. *The going out guide.
 
-export const Blog = ({title, description, link, type, _id}) => {
+export const Blog = () => {
   const [showSignInAdmin, setShowSignInAdmin] = useState(false)
 
   const onSignIn = () => {
@@ -17,18 +17,11 @@ export const Blog = ({title, description, link, type, _id}) => {
   return (
     <>     
       <Header/>
- 
-      <h1 className="">Brunch</h1>
-
-      <BlogPost 
-        key={_id}
-        type={type}
-        title={title}
-        description={description}
-        link={link}/>
-
+      
+        <BlogPost/>
+    
       {showSignInAdmin && <SignIn />}
-      {!showSignInAdmin && <button type='button' className='signin-button' onClick={onSignIn}>Admin</button>}
+      {!showSignInAdmin && <button type="button" className="signin-button" onClick={onSignIn}>Admin</button>}
      
       <Footer />
     </>
