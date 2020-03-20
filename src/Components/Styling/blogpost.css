@@ -69,7 +69,7 @@ p {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
   .blog-box {
     width: 40%;
@@ -78,12 +78,9 @@ p {
 
 @media (min-width:900px) {
   .blog-container {
-    flex-direction: row;
-    flex-wrap: wrap;
     -webkit-column-count: 4;
     -moz-column-count: 4;
     column-count: 4;
-    justify-content: space-evenly;
   }
   .blog-box {
     margin: 5px;

@@ -21,9 +21,6 @@ export const Header = () => {
             <li className="list-item">
               <a href="/blog">Blog</a>
             </li>
-            <li className="list-item">
-              <a href="/contact">Contact</a>
-            </li>
           </ul>
           <div className="toggle-burger-menu">
             <button className="burger" onClick={toggleBurgerMenu}>
@@ -42,12 +39,9 @@ export const Header = () => {
                 <li className="burger-item">
                   <a href="/blog">Blog</a>
                 </li>
-                <li className="burger-item">
-                  <a href="/contact">Contact</a>
-                </li>
               </ul>
             </div>
-            </div>
+          </div>
         </nav>
       </header>
     </>

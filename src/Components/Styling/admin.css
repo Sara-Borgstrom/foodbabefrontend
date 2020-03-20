@@ -1,38 +1,34 @@
-  .admin-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: baseline;
-    margin-left: 50px;
-    padding: 20px;
-    width: 350px;
-  }
-  
-  .description-box {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  input {
-    margin: 3px;
-  }
-  
-  .submit-button {
-    padding: 5px;
-    margin: 6px;
-    border: none;
-    border-radius: 5px;
-    background-color: #b5dddf;
-    width: 70px;
-    margin: 15px;
-  }
-  
-  .button-signout {
-    padding: 5px;
-    margin: 6px;
-    border: none;
-    border-radius: 5px;
-    background-color: #b5dddf;
-    width: 70px;
-    margin: 15px;
-  }
+ .admin-form {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-left: 50px;
+   padding: 20px;
+   width: 350px;
+ }
+ 
+ .form-input {
+   align-items: center;
+   flex-direction: row;
+   text-align: start;
+ }
+ 
+ .submit-button {
+   padding: 5px;
+   margin: 6px;
+   border: none;
+   border-radius: 5px;
+   background-color: #b5dddf;
+   width: 70px;
+   margin: 15px;
+ }
+ 
+ .button-signout {
+   padding: 5px;
+   margin: 6px;
+   border: none;
+   border-radius: 5px;
+   background-color: #b5dddf;
+   width: 70px;
+   margin: 15px;
+ }

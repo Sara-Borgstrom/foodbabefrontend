@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Styling/admin.css'
 
-const URL = 'http://localhost:8080/foods'
+const URL = 'https://foodbabe.herokuapp.com/foods'
 
 export const Admin = ({onClick}) => {
   const fileInput = useRef()
@@ -34,7 +34,7 @@ export const Admin = ({onClick}) => {
   }
   useEffect(() => {
     const fetchUserData = () => {
-      const URL= `https://project-auth-app.herokuapp.com/users/current`
+      const URL= `https://foodbabe.herokuapp.com/users/current`
       return fetch(URL, {
         method: 'GET',
         headers: {'Authorization': accessToken}
@@ -49,30 +49,30 @@ export const Admin = ({onClick}) => {
   return (
     <>
       <form onSubmit={handleFormSubmit} className="admin-form">
-        <label>
-        Food image
-          <input type="file" ref={fileInput} />
-        </label>
-        <label>
-        Title
+        <label className="form-input">
+          <p> Title</p>
           <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
         </label>
-        <label>
-        Link
+        <label className="form-input">
+          <p>Link</p>
           <input type="text" value={link} onChange={(e) => setLink(e.target.value)} />
         </label>
-        <label cla>
-       Description
+        <label className="form-input">
+          <p>Description</p>
           <textarea rows="3" type="text" value={description} onChange={(e) => setDescripion(e.target.value)} />
         </label>
-        <label>
-        Type
+        <label className="form-input">
+          <p>Type</p>
           <select type="text" value={type} onChange={(e) => setType(e.target.value)} >
             <option value="Brunch">Brunch</option>
             <option value="Afternoon Tea">Afternoon Tea</option>
             <option value="Dinner">Dinner</option>
             <option value="Drinks">Drinks</option>
           </select>
+        </label>
+        <label className="form-input">
+          <p>Food image</p>
+          <input type="file" ref={fileInput} />
         </label>
         <button type="submit" className="submit-button">
         Submit
