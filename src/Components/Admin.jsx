@@ -48,7 +48,7 @@ export const Admin = ({onClick}) => {
   })
   return (
     <>
-      <form onSubmit={handleFormSubmit} className='admin-form'>
+      <form onSubmit={handleFormSubmit} className="admin-form">
         <label>
         Food image
           <input type="file" ref={fileInput} />
@@ -63,7 +63,7 @@ export const Admin = ({onClick}) => {
         </label>
         <label cla>
        Description
-          <textarea rows='3' type="text" value={description} onChange={(e) => setDescripion(e.target.value)} />
+          <textarea rows="3" type="text" value={description} onChange={(e) => setDescripion(e.target.value)} />
         </label>
         <label>
         Type
@@ -74,11 +74,11 @@ export const Admin = ({onClick}) => {
             <option value="Drinks">Drinks</option>
           </select>
         </label>
-        <button type="submit" className='submit-button'>
+        <button type="submit" className="submit-button">
         Submit
         </button>
       </form>
-      <button type='button' className='button-signout' onClick={onClick}>Sign out </button>
+      <button type="button" className="button-signout" onClick={onClick}>Sign out </button>
     </>
   )
 }

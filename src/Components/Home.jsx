@@ -25,40 +25,40 @@ export const Home = () => {
     <div>
       <section>
         <Header />
-        <div className='first-part'>
+        <div className="first-part">
           {/* Find a better way to do this */}
-          <div className='presentation-box'>
+          <div className="presentation-box">
            
-            <div className='image-container'>
-              <div className='logo-container'>
-                <img src={FBlogo} className='presentation-logo' alt=""/> 
+            <div className="image-container">
+              <div className="logo-container">
+                <img src={FBlogo} className="presentation-logo" alt=""/> 
                 <h1>{welcome.title}</h1>
               </div>
-              <img src={img1} className='presentation-img' alt=""/> 
+              <img src={img1} className="presentation-img" alt=""/> 
             </div>
-            <div className='text-box'>
-              <div className='location-nav'>
-                <a href='#london-header-on-home'>{welcome.cityList[0]}</a>
-                <a href='#amsterdam-header-on-home'>{welcome.cityList[1]}</a>
-                <a href='#newyork-header-on-home'>{welcome.cityList[2]}</a>
+            <div className="text-box">
+              <div className="location-nav">
+                <a href="#london-header-on-home">{welcome.cityList[0]}</a>
+                <a href="#amsterdam-header-on-home">{welcome.cityList[1]}</a>
+                <a href="#newyork-header-on-home">{welcome.cityList[2]}</a>
               </div>              
-              <h3 className='text-block'>{welcome.headText}</h3>
+              <h3 className="text-block">{welcome.headText}</h3>
             </div>
           </div>
 
-          <div className='london-box'>
-            <h2 id='london-header-on-home'className='lon-title'>{welcome.subTitle} {welcome.cityList[0]}</h2>
-            <img src={lon1}  className='city-img'alt=''/>
+          <div className="london-box">
+            <h2 id="london-header-on-home"className="lon-title">{welcome.subTitle} {welcome.cityList[0]}</h2>
+            <img src={lon1}  className="city-img"alt=""/>
           </div>
         </div>
-        <div className='city-container'>
-          <div className='amsterdam-box'>
-            <h2 id='amsterdam-header-on-home' className='ams-title'>{welcome.subTitle} {welcome.cityList[1]} </h2>
-            <img src={ams1} className='city-img' alt=''/>
+        <div className="city-container">
+          <div className="amsterdam-box">
+            <h2 id="amsterdam-header-on-home" className="ams-title">{welcome.subTitle} {welcome.cityList[1]} </h2>
+            <img src={ams1} className="city-img" alt=""/>
           </div>
-          <div className='newyork-box'>
-            <h2 id='newyork-header-on-home' className='-title'>{welcome.subTitle} {welcome.cityList[2]}</h2>
-            <img src={nyc1} className='city-img' alt=''/>
+          <div className="newyork-box">
+            <h2 id="newyork-header-on-home" className="-title">{welcome.subTitle} {welcome.cityList[2]}</h2>
+            <img src={nyc1} className="city-img" alt=""/>
           </div>
         </div>
       </section>

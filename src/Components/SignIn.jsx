@@ -53,24 +53,24 @@ export const SignIn = () => {
       {errorMessage && <p>{errorMessage}</p>}
       {!signedIn && 
  <>
-   <form className='signin-form' onSubmit={handleSubmit} >
+   <form className="signin-form" onSubmit={handleSubmit} >
      <h2>Sign in</h2>
      <label>
 
-       <input type = 'name'
-         className='input-box'
-         placeholder='Name'
+       <input type = "name"
+         className="input-box"
+         placeholder="Name"
          value = {name}
          onChange = {(event) => {setName(event.target.value)}} /> 
      </label>
      <label>    
-       <input type = 'password'
-         placeholder='Password'
-         className='input-box'
+       <input type="password"
+         placeholder="Password"
+         className="input-box"
          value = {password}
          onChange = {(event) => {setPassword(event.target.value)}} /> 
      </label> 
-     <button className='signin-button' type='submit'>Sign in </button> 
+     <button className="signin-button" type="submit">Sign in </button> 
    </form> 
  </>}
     </>

@@ -14,12 +14,12 @@ export const Footer = () => {
   return (
     <footer>
       <h3>HUNGRY FOR MORE? GET IN TOUCH BELOW.</h3>
-      <button className='contact-button' type='button' onClick={handleClick}>HOME</button>
-      <div className='social-container'>
-        <a href='https://www.instagram.com/londonfoodbabes/' className='social-link'><img src={insta} className='social-icon' alt=''/></a>
-        <a href='https://www.facebook.com/londonfoodbabes' className='social-link'><img src={faceb} className='social-icon' alt='' /></a>
-        <a href='https://twitter.com/Londonfoodbabes' className='social-link'><img src={twitter} className='social-icon' alt='' /></a>
-        <a href='https://www.pinterest.se/londonfoodbabes/' className='social-link'><img src={pinterest} className='social-icon' alt='' /></a>
+      <button className="contact-button" type="button" onClick={handleClick}>HOME</button>
+      <div className="social-container">
+        <a href="https://www.instagram.com/londonfoodbabes/" className="social-link"><img src={insta} className="social-icon" alt=""/></a>
+        <a href="https://www.facebook.com/londonfoodbabes" className="social-link"><img src={faceb} className="social-icon" alt="" /></a>
+        <a href="https://twitter.com/Londonfoodbabes" className="social-link"><img src={twitter} className="social-icon" alt="" /></a>
+        <a href="https://www.pinterest.se/londonfoodbabes/" className="social-link"><img src={pinterest} className="social-icon" alt="" /></a>
       </div>
     
     </footer>

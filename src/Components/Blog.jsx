@@ -14,15 +14,14 @@ export const Blog = () => {
     setShowSignInAdmin(true)
   }
 
-
   return (
     <>     
       <Header/>
-      <article className='blog-container'>
+      
         <BlogPost/>
-      </article>
+    
       {showSignInAdmin && <SignIn />}
-      {!showSignInAdmin && <button type='button' className='signin-button' onClick={onSignIn}>Admin</button>}
+      {!showSignInAdmin && <button type="button" className="signin-button" onClick={onSignIn}>Admin</button>}
      
       <Footer />
     </>
