@@ -14,13 +14,13 @@ export const Header = () => {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <Link to="/home">Home</Link>
+              <Link to={"/home"}>Home</Link>
             </li>
             <li className="list-item">
-              <Link to="/about">About</Link>
+              <Link to={"/about"}>About</Link>
             </li>
             <li className="list-item">
-              <Link to="/blog">Blog</Link>
+              <Link to={"/blog"}>Blog</Link>
             </li>
           </ul>
           <div className="toggle-burger-menu">
@@ -32,13 +32,13 @@ export const Header = () => {
             <div className={`burger-list ${showBurgerMenu ? "show" : ""}`}>
               <ul className="burger-nav-list">
                 <li className="burger-item">
-                  <Link to="/home">Home</Link>
+                  <Link to={"/home"}>Home</Link>
                 </li>
                 <li className="burger-item">
-                  <Link to="/about">About</Link>
+                  <Link to={"/about"}>About</Link>
                 </li>
                 <li className="burger-item">
-                  <Link to="/blog">Blog</Link>
+                  <Link to={"/blog"}>Blog</Link>
                 </li>
               </ul>
             </div>
