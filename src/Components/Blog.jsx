@@ -5,8 +5,6 @@ import { Footer } from './Footer'
 import { SignIn } from './SignIn'
 import './Styling/blog.css'
 
-// *The brunch guide. *The afternoon tea guide. *The sunday rost guide. *The dinner guide. *The going out guide.
-
 export const Blog = () => {
   const [showSignInAdmin, setShowSignInAdmin] = useState(false)
 
@@ -18,7 +16,7 @@ export const Blog = () => {
     <>     
       <Header/>
       
-        <BlogPost/>
+      <BlogPost/>
     
       {showSignInAdmin && <SignIn />}
       {!showSignInAdmin && <button type="button" className="signin-button" onClick={onSignIn}>Admin</button>}
