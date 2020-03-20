@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Styling/admin.css'
 
-const URL = 'http://localhost:8080/foods'
+const URL = 'https://foodbabe.herokuapp.com/foods'
 
 export const Admin = ({onClick}) => {
   const fileInput = useRef()
@@ -34,7 +34,7 @@ export const Admin = ({onClick}) => {
   }
   useEffect(() => {
     const fetchUserData = () => {
-      const URL= `http://localhost:8080/users/current`
+      const URL= `https://foodbabe.herokuapp.com/users/current`
       return fetch(URL, {
         method: 'GET',
         headers: {'Authorization': accessToken}

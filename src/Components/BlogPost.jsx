@@ -1,7 +1,7 @@
 import React,{ useState, useEffect }  from 'react'
 import './Styling/blogpost.css'
 
-const url = 'http://localhost:8080/foods'
+const url = 'https://foodbabe.herokuapp.com/foods'
 
 export const BlogPost = () => {
   const [posts, setPosts] = useState([]);
