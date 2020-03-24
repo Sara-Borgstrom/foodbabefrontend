@@ -64,6 +64,7 @@ export const Admin = ({onClick}) => {
         <label className="form-input">
           <p>Type</p>
           <select type="text" value={type} onChange={(e) => setType(e.target.value)} >
+          <option value="Select type">Select type</option>
             <option value="Brunch">Brunch</option>
             <option value="Afternoon Tea">Afternoon Tea</option>
             <option value="Dinner">Dinner</option>

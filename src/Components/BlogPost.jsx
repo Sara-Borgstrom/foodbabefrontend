@@ -13,7 +13,7 @@ export const BlogPost = () => {
   }, []); 
 
   const brunchPosts = posts.filter(post => post.type.toLowerCase() === 'brunch')
-  const afternoonPosts = posts.filter(post => post.type.toLowerCase() === 'afternoon')
+  const afternoonPosts = posts.filter(post => post.type.toLowerCase() === 'afternoon tea')
   const dinnerPosts = posts.filter(post => post.type.toLowerCase() === 'dinner')
   const drinksPosts = posts.filter(post => post.type.toLowerCase() === 'drinks')
 
