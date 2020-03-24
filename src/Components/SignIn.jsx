@@ -8,7 +8,7 @@ export const SignIn = () => {
   const [signedIn, setSignedIn] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [user, setUser] = useState({})
-  const URL = 'http://localhost:8080/sessions'
+  const URL = 'https://foodbabe.herokuapp.com/sessions'
 
   const fetchProfile = async() => {
     const response = await
@@ -48,8 +48,7 @@ export const SignIn = () => {
   return (
     <>
       {signedIn &&
-  <Admin userSignedIn={signedIn} onClick={signOut} user={user}/>
-      }
+  <Admin userSignedIn={signedIn} onClick={signOut} user={user}/>}
       {errorMessage && <p>{errorMessage}</p>}
       {!signedIn && 
  <>
